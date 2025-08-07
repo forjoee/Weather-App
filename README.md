@@ -1,2 +1,2 @@
-# Weather-App
+# Weatherly
 🛠️ Under Construction
