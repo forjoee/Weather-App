@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://weatherly-9d2k.onrender.com";
+
 let allCities = [];
 let filteredCities = [];
 let selectedIndex = -1;
@@ -21,7 +23,7 @@ function positionDropdown() {
 window.addEventListener("resize", positionDropdown);
 cityInput.addEventListener("focus", positionDropdown);
 
-fetch("http://localhost:4000/api/cities")
+fetch(`${API_BASE_URL}/api/cities`)
     .then(res => res.json())
     .then(data => {
         const seen = new Set();
@@ -63,7 +65,7 @@ async function handleAutocomplete() {
     const validCities = [];
     for (const city of candidates) {
         try {
-            const resp = await fetch(`http://localhost:4000/api/check-city?name=${encodeURIComponent(city)}`);
+            const resp = await fetch(`${API_BASE_URL}/api/check-city?name=${encodeURIComponent(city)}`);
             const data = await resp.json();
             if (data.valid) validCities.push(city);
             if (validCities.length >= 10) break;
@@ -113,7 +115,7 @@ async function fetchWeather() {
     try {
         resultDiv.innerHTML = `<p>Loading...</p>`;
 
-        const weatherResp = await fetch(`http://localhost:4000/api/weather?q=${encodeURIComponent(city)}`);
+        const weatherResp = await fetch(`${API_BASE_URL}/api/weather?q=${encodeURIComponent(city)}`);
         const weatherData = await weatherResp.json();
 
         if (weatherData.cod === "404") {
@@ -121,7 +123,7 @@ async function fetchWeather() {
             return;
         }
 
-        const imageResp = await fetch(`http://localhost:4000/api/city-image?q=${encodeURIComponent(city)}`);
+        const imageResp = await fetch(`${API_BASE_URL}/api/city-image?q=${encodeURIComponent(city)}`);
         let cityImageUrl = 'https://via.placeholder.com/600x400?text=Image+Not+Found';
 
         if (imageResp.ok) {
