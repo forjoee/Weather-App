@@ -9,10 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, '../')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather';
