@@ -1,5 +1,6 @@
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
+console.log('Loaded API_KEY:', process.env.API_KEY ? 'Yes' : 'No');
 
 const express = require('express');
 const cors = require('cors');
