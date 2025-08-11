@@ -1,34 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./imgs/weatherly-logo.png" type="image/x-icon">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="shortcut icon" href="./imgs/weatherly-logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <title>Weatherly</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <img src="./imgs/weatherly-logo.png" alt="Logo" class="nav-logo-img">
-            <span class="nav-logo-text">Weatherly</span>
+            <a href="./index.html">
+                <img src="./imgs/weatherly-logo.png" class="nav-logo-img"/>
+            </a>
+            <span class="nav-logo-text"><a href="./index.html">Weatherly</a></span>
         </div>
     </nav>
 
     <div class="hero-background">
-        <video autoplay muted loop class="background-video">
-            <source src="" type="video/mp4">
-        </video>
+        <div class="background-layer">
+            <video autoplay muted loop preload="auto" class="background-video" id="background-video">
+                <source src="./videos/weatherly-video-bg.mp4" type="video/mp4"/>
+            </video>
+        </div>
+
         <div class="hero-content">
             <h1 id="h1">Welcome to Weatherly</h1>
-            <h3 id="p-faded">Check the weather of your city in milliseconds.</h3>
+            <p id="p-faded">See what's the weather on your city in seconds.</p>
             <div class="hero-buttons">
-                <a id="button" href="./start-here.html">Get Started</a>
+                <a id="button" href="./get-started.html">Get Started</a>
                 <a id="button-secondary" href="./learn-more.html">Learn More</a>
             </div>
         </div>
+
+        <div class="background-selector">
+            <div class="bg-option selected" data-type="video" data-src="./videos/weatherly-video-bg.mp4" style="background-image: url('./imgs/weatherly-video-thumbnail.png'); background-size: 90px; background-position: center;">
+                <i class="fas fa-play"></i>
+            </div>
+
+            <div class="bg-option" data-type="image" data-src="./imgs/weatherly-static-1.png" style="background-image: url('./imgs/weatherly-static-1.png'); background-size: 90px; background-position: center;"></div>
+            <div class="bg-option" data-type="image" data-src="./imgs/weatherly-static-2.png" style="background-image: url('./imgs/weatherly-static-2.png'); background-size: 90px; background-position: center;"></div>
+            <div class="bg-option" data-type="image" data-src="./imgs/weatherly-static-3.png" style="background-image: url('./imgs/weatherly-static-3.png'); background-size: 90px; background-position: center;"></div>
+            <div class="bg-option" data-type="image" data-src="./imgs/weatherly-static-4.png" style="background-image: url('./imgs/weatherly-static-4.png'); background-size: 90px; background-position: center;"></div>
+        </div>
     </div>
 
+    <!-- --- -->
+
+    <div class="description-wrapper">
+
+        <!-- image left, text right -->
+        <div class="description-container">
+            <div class="description-image image-left" style="background-image: url('./imgs/weatherly-logo.png');"></div>
+            <div class="description-text text-right">
+            <p>Weatherly is a fast, clean tool to check the weather in your city. 
+                It gives you accurate, real-time updates so you can plan your day without surprises.</p>
+            </div>
+        </div>
+
+        <!-- text left, image right -->
+        <div class="description-container reverse">
+            <div class="description-text text-left">
+            <p>Just type in your city, and Weatherly shows the temperature, conditions, and more simple, clear, and always up to date.</p>
+            </div>
+            <div class="description-image image-right" style="background-image: url('./imgs/p1-image.png');"></div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="./imgs/weatherly-logo-transparent.png" class="footer-logo"/>
+            <p class="footer-text">© 2025 Weatherly. All rights not reserved, but made with 🤍.</p>
+        </div>
+    </footer>
+
+    <script src="./selector.js"></script>
 </body>
 </html>
