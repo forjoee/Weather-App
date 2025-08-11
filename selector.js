@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const src = option.dataset.src;
 
         if (type === 'video') {
-        backgroundLayer.style.backgroundImage = ''; // Remove background image
+        backgroundLayer.style.backgroundImage = '';
         video.src = src;
         video.style.display = 'block';
         } else {
