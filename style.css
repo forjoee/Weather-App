@@ -419,18 +419,18 @@ a {
 
 .weather-info p.weather-details {
     margin: 12px 0 0;
-    font-size: 20px; /* bigger text */
+    font-size: 20px;
     color: #ffffff;
     line-height: 1.6;
     font-family: 'InterRegular';
     display: flex;
-    flex-direction: column; /* stack vertically */
-    align-items: center; /* center align text */
-    gap: 12px; /* space between lines */
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .weather-info p.weather-details .weather-item {
-    white-space: nowrap; /* keep label + value together */
+    white-space: nowrap;
 }
 
 #weather-result {
