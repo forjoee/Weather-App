@@ -3,7 +3,7 @@
 
 ## 👇 Check it out
 
-🌐 **[Website](https://forjoee.github.io/Weatherly/)**
+🌐 **[Website](https://weatherly-9d2k.onrender.com/)**
 
 ## 🧑‍💻 Technologies Used
 
