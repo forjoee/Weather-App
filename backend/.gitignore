@@ -4,5 +4,8 @@ backend/.env
 node_modules
 backend/node_modules
 
+weatherly-video-bg.mp4
+videos/weatherly-video-bg.mp4
+
 cities.json
 backend/cities.json
