@@ -19,7 +19,7 @@
 ## 🙏 Credits
 
 - Fonts by [Inter](https://rsms.me/inter/)  
-- Logos from [flaticon](https://flaticon.com/)  
+- Logos from [Flaticon](https://flaticon.com/)  
 - Weather data from [OpenWeatherMap](https://openweathermap.org/)  
 - Images powered by [Google Custom Search](https://developers.google.com/custom-search)  
 - Cities data from [Countries States Cities Database](https://github.com/dr5hn/countries-states-cities-database)
